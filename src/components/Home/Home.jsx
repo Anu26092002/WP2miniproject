@@ -1,5 +1,5 @@
 import React from 'react'
-import { Switch, Route } from 'react-router-dom'
+import {Link} from 'react-router-dom'
 import illus1 from '../../assets/illus1.jpg'
 import illus2 from '../../assets/illus2.jpg'
 import illus3 from '../../assets/illus3.jpg'
@@ -16,8 +16,8 @@ function Home() {
                                 <h1 className="display-1 lh-1 mb-3">Manage Learning at your own pace.</h1>
                                 <p className="lead fw-normal text-muted mb-5">Start Learning with EduManage Today.</p>
                                 <div className="d-flex flex-column flex-lg-row align-items-center">
-                                    <a className="btn btn-primary me-lg-3 mb-4 mb-lg-0" href="#!">Sign up</a>
-                                    <a className="btn btn-primary" href="#!">Sign in</a>
+                                    <Link className="btn btn-primary me-lg-3 mb-4 mb-lg-0" to="signup">Sign up</Link>
+                                    <Link className="btn btn-primary" to="/login">Sign in</Link>
                                 </div>
                             </div>
                         </div>
