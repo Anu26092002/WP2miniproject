@@ -23,7 +23,7 @@ function Home() {
                         </div>
                         <div className="col-lg-6">
                             <div>
-                                <img src={illus1} className="img-fluid" height="500" width="500"></img>
+                                <img src={illus1} className="img-fluid" height="500" width="500" alt=""></img>
                             </div>
                         </div>
                     </div>
