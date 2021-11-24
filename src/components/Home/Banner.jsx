@@ -4,7 +4,7 @@ function Banner(props) {
     let first,second = null;
     first = (<div className="col-lg-6">
         <div>
-            <img src={props.illusImage} className="img-fluid" height="500" width="500"></img>
+            <img src={props.illusImage} className="img-fluid" height="500" width="500" alt=""></img>
         </div>
         </div>)
     second = (<div className="col-lg-6">
@@ -13,7 +13,7 @@ function Banner(props) {
             <p className="lead fw-normal text-muted mb-5">{props.subtitleLine}</p>
         </div>
     </div>)
-    if(props.pos!=1){
+    if(props.pos !== 1){
         let temp=first;
         first=second;
         second =temp
