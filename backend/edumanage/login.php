@@ -2,6 +2,13 @@
 //including the database connection file
 include_once("config.php");
 include_once("ipgetter.php");
+include_once("access.php");
+require_once 'jwt/BeforeValidException.php';
+require_once 'jwt/ExpiredException.php';
+require_once 'jwt/SignatureInvalidException.php';
+require_once 'jwt/JWT.php';
+use \Firebase\JWT\JWT;
+
 header('Content-Type: application/json; charset=utf-8');
 header('Access-Control-Allow-Origin: http://localhost:3000');
 $data = json_decode(file_get_contents("php://input"), TRUE);
@@ -23,8 +30,12 @@ if(isset($data['email'])) {
 			$result["error"] = "incorrect";
 		}
 		if(password_verify($passwd,$sqlresult["passwd"])){
-			$res = mysqli_query($mysqli, "UPDATE userdata SET lastlogin = '$ipaddress' WHERE useremail = '$email'");
+			$res2 = mysqli_query($mysqli, "UPDATE userdata SET lastlogin = '$ipaddress' WHERE useremail = '$email'");
 			$result["result"] = true;
+			$curTime = time();
+			$token = array("sub" => $sqlresult['userid'],"iat" => $curTime,"exp" => $curTime + 2592000,"admin"=>false);
+    		$result['jwt'] = JWT::encode($token, $privateKey, 'RS256');
+			$result['name'] = $sqlresult['firstname']; 
 		}
 		else{
 			$result["error"] = "incorrect";

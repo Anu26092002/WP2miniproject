@@ -2,10 +2,13 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import Spinner from 'react-bootstrap/Spinner';
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux';
+import { loginUser, logoutUser } from '../../store/loginSlice'
 import axios from 'axios'
 const Login = () => {
     const [formState, setFormState] = useState({ email: "", passwd: "", remember: false })
     const [isLoading, setLoading] = useState(false)
+    const dispatch = useDispatch()
     const handleChange = (event, element) => {
         setFormState({ ...formState, [element]: event.target.value })
     }
@@ -19,15 +22,20 @@ const Login = () => {
         setLoading(true);
         axios.post('http://localhost/edumanage/login.php', {
             email: formState.email,
-            passwd: formState.passwd,
-            rem: formState.remember,
+            passwd: formState.passwd
         }, {
             headers: {
                 "Content-Type": "application/json",
             }
         }).then(response => {
             setLoading(false);
-            console.log(response);
+            if (response.data.result) {
+                dispatch(loginUser({
+                        name: response.data.name,
+                        jwt: response.data.jwt,
+                        rem: formState.remember
+                }))
+            }
         }).catch(error => {
             console.log(error);
         });
@@ -40,15 +48,15 @@ const Login = () => {
             <form>
                 <div className="form-floating my-4">
                     <input type="email" className="form-control" onChange={(e) => handleChange(e, "email")} value={formState.email} id="floatingInput" placeholder="name@example.com" />
-                    <label for="floatingInput">Email address</label>
+                    <label htmlFor="floatingInput">Email address</label>
                 </div>
                 <div className="form-floating my-4">
                     <input type="password" className="form-control" onChange={(e) => handleChange(e, "passwd")} value={formState.passwd} id="floatingPassword" placeholder="Password" />
-                    <label for="floatingPassword">Password</label>
+                    <label htmlFor="floatingPassword">Password</label>
                 </div>
                 <div className="my-4 form-check text-start">
                     <input type="checkbox" className="form-check-input" onChange={(e) => handleChange(e, "remember")} value={formState.remember} id="exampleCheck1" />
-                    <label class="form-check-label" for="exampleCheck1">Remember me</label>
+                    <label className="form-check-label" htmlFor="exampleCheck1">Remember me</label>
                 </div>
                 <button className="btn mb-3 btn-lg w-100 btn-primary " onClick={handleSubmit}>{buttonVal}</button>
                 <Link to="/signup" className="btn btn-lg w-100 btn-secondary ">Sign up</Link>

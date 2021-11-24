@@ -2,11 +2,13 @@ import React, { useState } from 'react';
 import Container from 'react-bootstrap/Container';
 import { Link } from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
+import { useDispatch } from 'react-redux';
+import { loginUser, logoutUser } from '../../store/loginSlice'
 import axios from 'axios'
 const Signup = () => {
     const [formState, setFormState] = useState({ email: "", passwd: "", name: "", remember: false, repass: "", age: "" })
     const [isLoading, setLoading] = useState(false)
-
+    const dispatch = useDispatch();
     const handleChange = (event, element) => {
         setFormState({ ...formState, [element]: event.target.value })
     }
@@ -22,15 +24,20 @@ const Signup = () => {
             email: formState.email,
             firstname: formState.name,
             passwd: formState.passwd,
-            age: formState.age,
-            rem: formState.rem,
+            age: formState.age
         }, {
             headers: {
                 "Content-Type": "application/json",
             }
         }).then(response => {
             setLoading(false);
-            console.log(response);
+            if (response.data.result) {
+                dispatch(loginUser({
+                        name: response.data.name,
+                        jwt: response.data.jwt,
+                        rem: formState.remember
+                }))
+            }
         }).catch(error => {
             console.log(error);
         });
