@@ -8,6 +8,9 @@ import Signup from './components/signin/Signup';
 import Cookies from 'universal-cookie';
 import { useDispatch } from 'react-redux';
 import { loginUser, logoutUser } from './store/loginSlice'
+import AdminCourses from './components/Courses/AdminCourses'
+import ManageUsers from './components/admUsers/ManageUsers'
+import Course from './components/subjects/Course'
 function App() {
   const cookies = new Cookies()
   const dispatch = useDispatch()
@@ -16,7 +19,8 @@ function App() {
       {
         name: cookies.get("name"),
         jwt: cookies.get("jwt"),
-        rem: false
+        rem: false,
+        admin: cookies.get("admin")
       }
     ))
   }
@@ -26,6 +30,9 @@ function App() {
       <BrowserRouter>
         <Navbar />
         <Routes>
+          <Route path="/managecourses" element={<AdminCourses />} />
+          <Route path="/manageusers" element={<ManageUsers />} />
+          <Route path="/course/:courseid" element={<Course />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/" element={<Home />} />

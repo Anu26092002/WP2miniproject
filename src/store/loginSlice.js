@@ -3,7 +3,8 @@ import Cookies from 'universal-cookie';
 const initialState = {
     login: false,
     jwt: null,
-    name: null
+    name: null,
+    admin: false
 }
 
 function titleCase(str) {
@@ -25,11 +26,12 @@ export const loginSlice = createSlice({
             state.login = true;
             state.jwt = action.payload.jwt;
             state.name = titleCase(action.payload.name.toLowerCase())
-
+            state.admin = action.payload.admin;
             if (action.payload.rem) {
                 const cookies = new Cookies();
                 cookies.set('name', action.payload.name, { path: '/' , sameSite:'strict',maxAge:2592000 });
                 cookies.set('jwt', action.payload.jwt, { path: '/' ,sameSite:'strict' ,maxAge:2592000});
+                cookies.set('admin', action.payload.admin, { path: '/' ,sameSite:'strict' ,maxAge:2592000});
             }
         },
         logoutUser : (state) => {

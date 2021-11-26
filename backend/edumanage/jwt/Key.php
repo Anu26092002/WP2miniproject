@@ -57,3 +57,4 @@ class Key
         return $this->keyMaterial;
     }
 }
+?>

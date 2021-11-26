@@ -9,6 +9,22 @@ import { logoutUser } from '../../store/loginSlice'
 import { Link } from 'react-router-dom'
 function NavbarComponent() {
     const dispatch = useDispatch();
+    const adm = useSelector((state) => state.login.admin)
+    let adminOptions = (<>
+        <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/courses">My Courses</NavDropdown.Item>
+        <NavDropdown.Item as={Link} to="/submissions">My Submissions</NavDropdown.Item>
+    </>)
+    if (adm) {
+        adminOptions = (
+            <>
+                <NavDropdown.Item as={Link} to="/admdashboard">Admin Dashboard</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/manageusers">Manage Users</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/managecourses">Manage Courses</NavDropdown.Item>
+                <NavDropdown.Item as={Link} to="/admsubmissions">View Submissions</NavDropdown.Item>
+            </>
+        )
+    }
     const name = useSelector((state) => state.login.name)
     const loginState = useSelector((state) => state.login.login)
     let rhs = (<Navbar.Collapse className="justify-content-end d-grid gap-3">
@@ -22,10 +38,10 @@ function NavbarComponent() {
                     Signed in as:
                 </Navbar.Text>
                 <NavDropdown title={name} id="navbarScrollingDropdown">
-                    <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
-                    <NavDropdown.Item as={Link} to="/profile">Profile</NavDropdown.Item>
+                    {adminOptions}
                     <NavDropdown.Divider />
-                    <NavDropdown.Item onClick={()=>dispatch(logoutUser())}>
+                    <NavDropdown.Item as={Link} to="/profile">Profile</NavDropdown.Item>
+                    <NavDropdown.Item onClick={() => dispatch(logoutUser())}>
                         Log out
                     </NavDropdown.Item>
                 </NavDropdown>
@@ -40,7 +56,7 @@ function NavbarComponent() {
                     <Nav.Link as={Link} to="/aboutus">About Us</Nav.Link>
                 </Nav>
                 <Nav>
-                {rhs}
+                    {rhs}
                 </Nav>
             </Container>
         </Navbar >

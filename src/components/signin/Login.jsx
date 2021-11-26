@@ -33,7 +33,8 @@ const Login = () => {
                 dispatch(loginUser({
                         name: response.data.name,
                         jwt: response.data.jwt,
-                        rem: formState.remember
+                        rem: formState.remember,
+                        admin: response.data.admin
                 }))
             }
         }).catch(error => {

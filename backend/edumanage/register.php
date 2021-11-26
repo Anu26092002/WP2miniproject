@@ -40,6 +40,7 @@ if (isset($data['email'])) {
 			$token = array("sub" => $sqlresult['userid'],"iat" => $curTime,"exp" => $curTime + 2592000,"admin"=>false);
     		$result['jwt'] = JWT::encode($token, $privateKey, 'RS256');
 			$result['name'] = $sqlresult['firstname']; 
+			$result['admin'] = $sqlresult['isadmin']; 
 			echo (json_encode($result));
 		}
 	}

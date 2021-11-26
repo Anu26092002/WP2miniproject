@@ -33,11 +33,12 @@ if(isset($data['email'])) {
 			$res2 = mysqli_query($mysqli, "UPDATE userdata SET lastlogin = '$ipaddress' WHERE useremail = '$email'");
 			$result["result"] = true;
 			$curTime = time();
-			$token = array("sub" => $sqlresult['userid'],"iat" => $curTime,"exp" => $curTime + 2592000,"admin"=>false);
+			$token = array("sub" => $sqlresult['userid'],"iat" => $curTime,"exp" => $curTime + 2592000,"admin"=>$sqlresult['isadmin']);
     		$result['jwt'] = JWT::encode($token, $privateKey, 'RS256');
 			$result['name'] = $sqlresult['firstname']; 
+			$result['admin'] = $sqlresult['isadmin']; 
 		}
-		else{
+		else{	
 			$result["error"] = "incorrect";
 		}
 		echo (json_encode($result));
