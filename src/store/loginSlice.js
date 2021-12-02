@@ -41,7 +41,7 @@ export const loginSlice = createSlice({
             const cookies = new Cookies();
             cookies.remove('name');
             cookies.remove('jwt');
-
+            cookies.remove('admin');
         }
     }
 })

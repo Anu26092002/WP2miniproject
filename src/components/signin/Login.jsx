@@ -37,6 +37,9 @@ const Login = () => {
                         admin: response.data.admin
                 }))
             }
+            if(response.data.error == "incorrect"){
+                alert("incorrect Credentials")
+            }
         }).catch(error => {
             console.log(error);
         });

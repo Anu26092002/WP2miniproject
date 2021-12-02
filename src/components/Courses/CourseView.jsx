@@ -59,9 +59,9 @@ const CourseView = (props) => {
                     {coursesArray.length ? coursesArray.map((element) => {
                         return (
                             <Col key={element.course_id} style={selectStyleObj}>
-                                <Card style={{ maxWidth: '18rem' }} className="text-start h-100" onClick={(props.selectCourse)?()=>handleClick(element.course_id):()=>{handleRedirect(element.course_id)}}>
+                                <Card style={{ maxWidth: '18rem' }} className="text-start h-100" >
                                     <Card.Body>
-                                        <Card.Title><h3>{element.course_name}</h3></Card.Title>
+                                        <Card.Title style={{cursor:"pointer"}} onClick={(props.selectCourse)?()=>handleClick(element.course_id):()=>{handleRedirect(element.course_id)}}><h3>{element.course_name}</h3></Card.Title>
                                         <Card.Text className="text-muted">
                                             Created by {element.firstname}
                                         </Card.Text>

@@ -13,15 +13,15 @@ function NavbarComponent() {
     let adminOptions = (<>
         <NavDropdown.Item as={Link} to="/dashboard">Dashboard</NavDropdown.Item>
         <NavDropdown.Item as={Link} to="/courses">My Courses</NavDropdown.Item>
-        <NavDropdown.Item as={Link} to="/submissions">My Submissions</NavDropdown.Item>
+        {/* <NavDropdown.Item as={Link} to="/submissions">My Submissions</NavDropdown.Item> */}
     </>)
-    if (adm) {
+    if (adm ==1) {
         adminOptions = (
             <>
-                <NavDropdown.Item as={Link} to="/admdashboard">Admin Dashboard</NavDropdown.Item>
+                {/* <NavDropdown.Item as={Link} to="/admdashboard">Admin Dashboard</NavDropdown.Item> */}
                 <NavDropdown.Item as={Link} to="/manageusers">Manage Users</NavDropdown.Item>
                 <NavDropdown.Item as={Link} to="/managecourses">Manage Courses</NavDropdown.Item>
-                <NavDropdown.Item as={Link} to="/admsubmissions">View Submissions</NavDropdown.Item>
+                {/* <NavDropdown.Item as={Link} to="/admsubmissions">View Submissions</NavDropdown.Item> */}
             </>
         )
     }
@@ -40,7 +40,7 @@ function NavbarComponent() {
                 <NavDropdown title={name} id="navbarScrollingDropdown">
                     {adminOptions}
                     <NavDropdown.Divider />
-                    <NavDropdown.Item as={Link} to="/profile">Profile</NavDropdown.Item>
+                    {/* <NavDropdown.Item as={Link} to="/profile">Profile</NavDropdown.Item> */}
                     <NavDropdown.Item onClick={() => dispatch(logoutUser())}>
                         Log out
                     </NavDropdown.Item>
