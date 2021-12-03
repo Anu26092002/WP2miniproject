@@ -1,73 +1,76 @@
-# Getting Started with Create React App
+<h1 align="center">LMS App using React and PHP</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<p align="center">
+ <img width=200px src="src/utils/Images/logo.png"  alt="Project logo" style='background-color: white'></a>
+</p>
 
-## Available Scripts
 
-In the project directory, you can run:
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-table-of-contents)
 
-### `npm start`
+## 📝 Table of Contents
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+- [About](#about)
+- [Getting Started ](#getting_started)
+- [Built Using](#built_using)
+- [Packages](#packages)
+- [Authors](#authors)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-about-a-name--abouta)
 
-### `npm test`
+## 🧐 About <a name = "about"></a>
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Website designed to accept the input about the states and transtions of a Non-Deterministic Automata (NFA) and to convert it into an equivalent Deterministic Finite Automata (DFA) and visualize it.
+<br> 
 
-### `npm run build`
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-getting-started-a-name--getting_starteda)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## 🏁 Getting Started <a name = "getting_started"></a>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
 
-### `npm run eject`
+### Prerequisites
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+- [React](https://reactjs.org/)
+- [Tailwind CSS](https://tailwindcss.com/)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+### Installing
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+A step by step series of examples that tell you how to get a development env running.
 
-## Learn More
+- Clone this repository
+- Open command line in the cloned folder,
+  
+  - To install dependencies, run `npm install`
+  
+  - To run the application for development,
+    
+    - then run `npm start` in the client folder to start the app
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+- Open [localhost:3000](localhost:3000) in the browser
 
-To learn React, check out the [React documentation](https://reactjs.org/).
 
-### Code Splitting
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## :hammer_and_wrench: Built Using <a name = "built_using"></a>
 
-### Analyzing the Bundle Size
+- [React](https://reactjs.org/) - Web Framework
+- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
+- [GraphViz API](https://github.com/DomParfitt/graphviz-react#readme) - Library for visualization of the DFA
+- [quickchart.io](https://quickchart.io/documentation/graphviz-api/) - API for visualization
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
 
-### Making a Progressive Web App
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+## 📦 Packages Used <a name = "packages"></a>
 
-### Advanced Configuration
+npm packages
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
 
-### Deployment
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
-
-# Anurag Ghosh
-# Yash Chaudhari
+## 	:pencil2: Authors <a name="authors"></a>
+- [Ishan Kulkarni](https://www.linkedin.com/in/anurag-g-a01531198)
+- [Anurag Ghosh](https://www.linkedin.com/in/kulkarniishan)
+- [Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
