@@ -19,7 +19,7 @@
 
 ## 🧐 About <a name = "about"></a>
 
-Website designed to accept the input about the states and transtions of a Non-Deterministic Automata (NFA) and to convert it into an equivalent Deterministic Finite Automata (DFA) and visualize it.
+Web App designed for Learning Management System which is managed by a Admin and users are managed by the admin. The admin has the rights to add or remove the users and can add students in a particular course.
 <br> 
 
 
@@ -72,6 +72,6 @@ npm packages
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
 ## 	:pencil2: Authors <a name="authors"></a>
-- [Ishan Kulkarni](https://www.linkedin.com/in/anurag-g-a01531198)
-- [Anurag Ghosh](https://www.linkedin.com/in/kulkarniishan)
-- [Aakshad Thole](https://www.linkedin.com/in/akshad-thole-b756621b2)
+- [Yash Chaudhari]
+- [Anurag Ghosh](https://www.linkedin.com/in/anurag-g-a01531198)
+- [Anshum Etane]
