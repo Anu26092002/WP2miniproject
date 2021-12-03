@@ -112,10 +112,10 @@ function Aboutus() {
                         <div class="col-md-3 pl-4 pr-4">
                             <img class="img-fluid" src="imgs/logo_text_white_small.png" alt="" />
 
-                            <a style="color:silver;" class="p-1" href="#"><i class="fab fa-2x fa-facebook-square"></i></a>
-                            <a style="color: silver;" class="p-1" href="#"><i class="fab fa-2x fa-google-plus-square"></i></a>
-                            <a style="color: silver;" class="p-1" href="#"><i class="fab fa-2x fa-twitter-square"></i></a>
-                            <a style="color: silver;" class="p-1" href="#"><i class="fab fa-2x fa-instagram"></i></a>
+                            <a style={{color:"silver"}} class="p-1" href="#"><i class="fab fa-2x fa-facebook-square"></i></a>
+                            <a style={{color:"silver"}} class="p-1" href="#"><i class="fab fa-2x fa-google-plus-square"></i></a>
+                            <a style={{color:"silver"}} class="p-1" href="#"><i class="fab fa-2x fa-twitter-square"></i></a>
+                            <a style={{color:"silver"}} class="p-1" href="#"><i class="fab fa-2x fa-instagram"></i></a>
                         </div>
                     </div>
                 </div>

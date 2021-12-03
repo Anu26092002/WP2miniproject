@@ -35,6 +35,7 @@ function App() {
           <Route path="/course/:courseid" element={<Course />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+          <Route path="/aboutus" element={<Aboutus />} />
           <Route path="/" element={<Home />} />
         </Routes>
       </BrowserRouter>
