@@ -3,19 +3,6 @@ import React from 'react'
 function Aboutus() {
     return (
         <div>
-            <section class="breadcrumbs-section">
-                <div class="container p-1 p-sm-3">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2>About Us</h2>
-                            <ol class="breadcrumb">
-                                <li class="breadcrumb-item"><a href="default.html">Home</a></li>
-                                <li class="breadcrumb-item active">About Us</li>
-                            </ol>
-                        </div>
-                    </div>
-                </div>
-            </section>
 
             <section class="about-company-section">
                 <div class="container p-1 p-sm-3">
@@ -76,7 +63,7 @@ function Aboutus() {
                     <hr/>
                     <div class="row">
                         <div class="col-md-4 text-center">
-                            <img class="img-fluid qualities-img p-4" src="imgs/team/1.png" />
+                            <img class="img-fluid qualities-img p-4" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
                             <h5>
                                 Designation
                             </h5>
@@ -85,7 +72,7 @@ function Aboutus() {
                             </p>
                         </div>
                         <div class="col-md-4 text-center">
-                            <img class="img-fluid qualities-img p-4" src="imgs/team/2.png" />
+                            <img class="img-fluid qualities-img p-4" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
                             <h5>
                                 Designation
                             </h5>
@@ -94,7 +81,7 @@ function Aboutus() {
                             </p>
                         </div>
                         <div class="col-md-4 text-center">
-                            <img class="img-fluid qualities-img p-4" src="imgs/team/3.png" />
+                            <img class="img-fluid qualities-img p-4" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
                             <h5>
                                 Designation
                             </h5>
