@@ -1,7 +1,7 @@
 <h1 align="center">LMS App using React and PHP</h1>
 
 <p align="center">
- <img width=200px src="src/utils/Images/logo.png"  alt="Project logo" style='background-color: white'></a>
+ <img width=200px src="public/favicon.ico"  alt="Project logo" style='background-color: white'></a>
 </p>
 
 
