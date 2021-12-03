@@ -32,7 +32,8 @@ These instructions will get you a copy of the project up and running on your loc
 ### Prerequisites
 
 - [React](https://reactjs.org/)
-- [Tailwind CSS](https://tailwindcss.com/)
+- [Bootsrtap](https://getbootstrap.com/)
+- [php](https://www.php.net/)
 
 
 ### Installing
@@ -46,7 +47,8 @@ A step by step series of examples that tell you how to get a development env run
   
   - To run the application for development,
     
-    - then run `npm start` in the client folder to start the app
+    - then run `npm start` in the client folder to start the frontend
+    - for backend you need to have Xampp in your system and make the databases accordingly.
 
 - Open [localhost:3000](localhost:3000) in the browser
 
@@ -55,10 +57,9 @@ A step by step series of examples that tell you how to get a development env run
 
 ## :hammer_and_wrench: Built Using <a name = "built_using"></a>
 
-- [React](https://reactjs.org/) - Web Framework
-- [Tailwind CSS](https://tailwindcss.com/) - CSS Framework
-- [GraphViz API](https://github.com/DomParfitt/graphviz-react#readme) - Library for visualization of the DFA
-- [quickchart.io](https://quickchart.io/documentation/graphviz-api/) - API for visualization
+- [React](https://reactjs.org/) - Web Frontend Framework
+- [Bootstrap](https://getbootstrap.com/) - CSS Framework
+- [php](https://www.php.net/) - Backend 
 
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
