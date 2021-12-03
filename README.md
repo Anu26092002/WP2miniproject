@@ -72,6 +72,6 @@ npm packages
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-authors-a-name--authorsa)
 
 ## 	:pencil2: Authors <a name="authors"></a>
-- [Yash Chaudhari]
+- [Yash Chaudhari]()
 - [Anurag Ghosh](https://www.linkedin.com/in/anurag-g-a01531198)
-- [Anshum Etane]
+- [Anshum Etane]()
