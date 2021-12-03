@@ -65,7 +65,7 @@ function Aboutus() {
                         <div class="col-md-4 text-center">
                             <img class="img-fluid qualities-img p-4" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
                             <h5>
-                                Designation
+                                Planned and Designed by
                             </h5>
                             <p>
                                 <i>- Anurag Ghosh</i>
@@ -74,7 +74,7 @@ function Aboutus() {
                         <div class="col-md-4 text-center">
                             <img class="img-fluid qualities-img p-4" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
                             <h5>
-                                Designation
+                                Implemented by
                             </h5>
                             <p>
                                 <i>- Yash Chaudhari</i>
@@ -83,7 +83,7 @@ function Aboutus() {
                         <div class="col-md-4 text-center">
                             <img class="img-fluid qualities-img p-4" src="https://cdn-icons-png.flaticon.com/512/3135/3135715.png" />
                             <h5>
-                                Designation
+                                Implemented by
                             </h5>
                             <p>
                                 <i>- Anshum Etane</i>
