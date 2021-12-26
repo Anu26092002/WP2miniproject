@@ -14,6 +14,7 @@
 - [Built Using](#built_using)
 - [Packages](#packages)
 - [Authors](#authors)
+- [Contribution](#contribution)
 
 [![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-about-a-name--abouta)
 
@@ -75,3 +76,11 @@ npm packages
 - [Yash Chaudhari]()
 - [Anurag Ghosh](https://www.linkedin.com/in/anurag-g-a01531198)
 - [Anshum Etane]()
+
+[![-----------------------------------------------------](https://raw.githubusercontent.com/andreasbm/readme/master/assets/lines/colored.png)](#-built-using-a-name--built_usinga)
+## :brain: Contribution over Time <a name="contribution"></a>
+<div align="center">
+ <a href="https://www.apiseven.com/en/contributor-graph?chart=contributorOverTime&repo=Anu26092002/WP2miniproject">
+  <img src="https://contributor-graph-api.apiseven.com/contributors-svg?chart=contributorOverTime&repo=Anu26092002/WP2miniproject" alt="Contribution image"/>
+ </a>
+</div>
