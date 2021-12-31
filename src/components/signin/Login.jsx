@@ -11,6 +11,23 @@ const Login = () => {
     const dispatch = useDispatch()
     const handleChange = (event, element) => {
         setFormState({ ...formState, [element]: event.target.value })
+        if(element == "passwd"){
+            setValid(CheckPassword(event.target.value))
+        }
+    }
+    const [isValid, setValid] = useState(true)
+    function CheckPassword(inputtxt) {
+        var paswd = /^(?=.*[0-9])(?=.*[!@#$%^&*])[a-zA-Z0-9!@#$%^&*]{7,15}$/;
+        if (inputtxt.match(paswd)) {
+            return true;
+        }
+        else {
+            return false;
+        }
+    }
+    let cssClass = "form-control"
+    if(!isValid){
+        cssClass = cssClass +" is-invalid"
     }
     const buttonVal = (isLoading) ? (<Spinner as="span"
         animation="border"
@@ -19,30 +36,37 @@ const Login = () => {
         aria-hidden="true" />) : "Login";
     const handleSubmit = (e) => {
         e.preventDefault();
-        setLoading(true);
-        axios.post('http://localhost/edumanage/login.php', {
-            email: formState.email,
-            passwd: formState.passwd
-        }, {
-            headers: {
-                "Content-Type": "application/json",
-            }
-        }).then(response => {
-            setLoading(false);
-            if (response.data.result) {
-                dispatch(loginUser({
+        let val = CheckPassword(formState.passwd)
+        if (val) {
+            setLoading(true);
+            setValid(true);
+            axios.post('http://localhost/edumanage/login.php', {
+                email: formState.email,
+                passwd: formState.passwd
+            }, {
+                headers: {
+                    "Content-Type": "application/json",
+                }
+            }).then(response => {
+                setLoading(false);
+                if (response.data.result) {
+                    dispatch(loginUser({
                         name: response.data.name,
                         jwt: response.data.jwt,
                         rem: formState.remember,
                         admin: response.data.admin
-                }))
-            }
-            if(response.data.error == "incorrect"){
-                alert("incorrect Credentials")
-            }
-        }).catch(error => {
-            console.log(error);
-        });
+                    }))
+                }
+                if (response.data.error == "incorrect") {
+                    alert("incorrect Credentials")
+                }
+            }).catch(error => {
+                console.log(error);
+            });
+        }
+        else{
+            setValid(false);
+        }
     }
     return (
         <Container className="mt-5 p-5 shadow-sm mb-5 border rounded bg-light" style={{ width: "500px" }}>
@@ -55,8 +79,9 @@ const Login = () => {
                     <label htmlFor="floatingInput">Email address</label>
                 </div>
                 <div className="form-floating my-4">
-                    <input type="password" className="form-control" onChange={(e) => handleChange(e, "passwd")} value={formState.passwd} id="floatingPassword" placeholder="Password" />
-                    <label htmlFor="floatingPassword">Password</label>
+                    <input type="password" className={cssClass} onChange={(e) => handleChange(e, "passwd")} value={formState.passwd} id="floatingPassword" placeholder="Password" />
+                    
+                    {(!isValid) ? (<label htmlFor="floatingPasswordInvalid">Password too weak or exceeds 15 characters</label>) : <label htmlFor="floatingPassword">Password</label>}
                 </div>
                 <div className="my-4 form-check text-start">
                     <input type="checkbox" className="form-check-input" onChange={(e) => handleChange(e, "remember")} value={formState.remember} id="exampleCheck1" />
